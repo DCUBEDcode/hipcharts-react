@@ -1,38 +1,141 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App__container {
+  position: relative;
+  z-index: 20;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.App__logo {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  width: 100px;
 }
 
-@keyframes App-logo-spin {
+.Intro__title {
+  color: #fff;
+  text-align: center;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.Intro__action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  background: #0066FF;
+  border: 0;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 2px;
+  text-align: center;
+  padding: 0 3rem;
+}
+
+.ArtistWall {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #111;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.ArtistWall__slide {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-row-gap: 2px;
+}
+
+.ArtistWall__row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 2px;
+  animation: moveLeft 180s ease forwards;
+  position: relative;
+}
+
+@keyframes moveLeft {
   from {
-    transform: rotate(0deg);
+    transform: translateX(0);
   }
   to {
-    transform: rotate(360deg);
+    transform: translateX(calc(-100% - 8rem));
   }
 }
+
+.ArtistWall__item {
+  height: 100%;
+  background-size: cover;
+}
+
+.ArtistWall__cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(87.07% 87.07% at 50% 1.6%, rgba(45, 45, 45, 0.9) 0%, rgba(0, 0, 0, 0.9) 100%);
+  z-index: 10;
+}
+
+.ArtistWall__row:nth-child(1) { left: -8rem }
+.ArtistWall__row:nth-child(2) { left: -6rem }
+.ArtistWall__row:nth-child(3) { left: -8rem }
+.ArtistWall__row:nth-child(4) { left: -6rem }
+.ArtistWall__row:nth-child(5) { left: -8rem }
+
+.ArtistWall__row:nth-child(1) .ArtistWall__item:nth-child(1) { background-image: url('artists/1.jpg') }
+.ArtistWall__row:nth-child(1) .ArtistWall__item:nth-child(2) { background-image: url('artists/2.jpg') }
+.ArtistWall__row:nth-child(1) .ArtistWall__item:nth-child(3) { background-image: url('artists/3.jpg') }
+.ArtistWall__row:nth-child(1) .ArtistWall__item:nth-child(4) { background-image: url('artists/4.jpg') }
+.ArtistWall__row:nth-child(1) .ArtistWall__item:nth-child(5) { background-image: url('artists/5.jpg') }
+
+.ArtistWall__row:nth-child(2) .ArtistWall__item:nth-child(1) { background-image: url('artists/6.jpg') }
+.ArtistWall__row:nth-child(2) .ArtistWall__item:nth-child(2) { background-image: url('artists/7.jpg') }
+.ArtistWall__row:nth-child(2) .ArtistWall__item:nth-child(3) { background-image: url('artists/8.jpg') }
+.ArtistWall__row:nth-child(2) .ArtistWall__item:nth-child(4) { background-image: url('artists/9.jpg') }
+.ArtistWall__row:nth-child(2) .ArtistWall__item:nth-child(5) { background-image: url('artists/10.jpg') }
+
+.ArtistWall__row:nth-child(3) .ArtistWall__item:nth-child(1) { background-image: url('artists/11.jpg') }
+.ArtistWall__row:nth-child(3) .ArtistWall__item:nth-child(2) { background-image: url('artists/12.jpg') }
+.ArtistWall__row:nth-child(3) .ArtistWall__item:nth-child(3) { background-image: url('artists/13.jpg') }
+.ArtistWall__row:nth-child(3) .ArtistWall__item:nth-child(4) { background-image: url('artists/14.jpg') }
+.ArtistWall__row:nth-child(3) .ArtistWall__item:nth-child(5) { background-image: url('artists/15.jpg') }
+
+.ArtistWall__row:nth-child(4) .ArtistWall__item:nth-child(1) { background-image: url('artists/16.jpg') }
+.ArtistWall__row:nth-child(4) .ArtistWall__item:nth-child(2) { background-image: url('artists/17.jpg') }
+.ArtistWall__row:nth-child(4) .ArtistWall__item:nth-child(3) { background-image: url('artists/18.jpg') }
+.ArtistWall__row:nth-child(4) .ArtistWall__item:nth-child(4) { background-image: url('artists/19.jpg') }
+.ArtistWall__row:nth-child(4) .ArtistWall__item:nth-child(5) { background-image: url('artists/20.jpg') }
+
+.ArtistWall__row:nth-child(5) .ArtistWall__item:nth-child(1) { background-image: url('artists/21.jpg') }
+.ArtistWall__row:nth-child(5) .ArtistWall__item:nth-child(2) { background-image: url('artists/22.jpg') }
+.ArtistWall__row:nth-child(5) .ArtistWall__item:nth-child(3) { background-image: url('artists/23.jpg') }
+.ArtistWall__row:nth-child(5) .ArtistWall__item:nth-child(4) { background-image: url('artists/24.jpg') }
+.ArtistWall__row:nth-child(5) .ArtistWall__item:nth-child(5) { background-image: url('artists/25.jpg') }

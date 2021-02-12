@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import logo from './logo-stacked.svg';
+
+import ArtistWall from './components/ArtistWall';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ArtistWall />
+      <div className="App__container">
+        <header className="App__logo">
+          <img src={logo} className="logo" alt="Hipcharts" />
+        </header>
+        <div className="Intro">
+          <h1 className="Intro__title">Create and share charts of your favourite music</h1>
+          <footer className="Intro__action">
+            <button className="btn">Create chart</button>
+          </footer>
+        </div>
+      </div>
     </div>
   );
 }
