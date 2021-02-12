@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/hipcharts-react/static/css/main.c1b8fae1.chunk.css",
+    "main.css": "/hipcharts-react/static/css/main.2c71ef3f.chunk.css",
     "main.js": "/hipcharts-react/static/js/main.fe7b9145.chunk.js",
     "main.js.map": "/hipcharts-react/static/js/main.fe7b9145.chunk.js.map",
     "runtime-main.js": "/hipcharts-react/static/js/runtime-main.15254622.js",
@@ -10,7 +10,7 @@
     "static/js/3.f1a2ca0c.chunk.js": "/hipcharts-react/static/js/3.f1a2ca0c.chunk.js",
     "static/js/3.f1a2ca0c.chunk.js.map": "/hipcharts-react/static/js/3.f1a2ca0c.chunk.js.map",
     "index.html": "/hipcharts-react/index.html",
-    "static/css/main.c1b8fae1.chunk.css.map": "/hipcharts-react/static/css/main.c1b8fae1.chunk.css.map",
+    "static/css/main.2c71ef3f.chunk.css.map": "/hipcharts-react/static/css/main.2c71ef3f.chunk.css.map",
     "static/js/2.931f353a.chunk.js.LICENSE.txt": "/hipcharts-react/static/js/2.931f353a.chunk.js.LICENSE.txt",
     "static/media/App.css": "/hipcharts-react/static/media/9.755e0238.jpg",
     "static/media/logo-stacked.b4ea9276.svg": "/hipcharts-react/static/media/logo-stacked.b4ea9276.svg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.15254622.js",
     "static/js/2.931f353a.chunk.js",
-    "static/css/main.c1b8fae1.chunk.css",
+    "static/css/main.2c71ef3f.chunk.css",
     "static/js/main.fe7b9145.chunk.js"
   ]
 }
